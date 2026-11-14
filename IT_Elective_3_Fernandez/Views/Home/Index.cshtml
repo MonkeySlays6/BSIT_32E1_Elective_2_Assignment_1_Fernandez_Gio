@@ -1,0 +1,26 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "MVC Quiz";
+}
+
+<div class="container mt-5 mb-5">
+    <h1 class="text-center mb-4">ASP.NET Core MVC Quiz</h1>
+
+    @foreach (var item in Model)
+    {
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="mb-3">@item.Question</h5>
+
+                <hr />
+
+                <h6 class="text-success">
+                    Answer:
+                </h6>
+
+                <p>@item.Answer</p>
+            </div>
+        </div>
+    }
+</div>
